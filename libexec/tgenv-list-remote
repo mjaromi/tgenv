@@ -18,4 +18,4 @@ if [ $return_code -eq 22 ];then
   print=`cat ${TGENV_ROOT}/list_all_versions_offline`
 fi
 
-echo $print | grep -o -E "[0-9]+\.[0-9]+\.[0-9]+(-(rc|beta)[0-9]+)?" | uniq
+echo $print | grep -o -E "[0-9]+\.[0-9]+\.[0-9]+(-(rc|beta)[0-9]+)?" | uniq | tac
